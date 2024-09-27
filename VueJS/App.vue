@@ -1,13 +1,12 @@
 <template>
-    <div id="app"
-    <Header />
-    <router-view />
-    <Footer />
-</div>
+    <div id="app">
+        <Header />
+        <router-view />
+        <Footer />
+    </div>
 </template>
 
 <script>
-import { Header } from "./VueJS/Header.vue";
-import { Footer } from "./VueJS/Footer.vue";
-
+import { Header } from "./Header.vue"
+import { Footer } from "./Footer.vue";
 </script>

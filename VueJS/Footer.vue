@@ -1,11 +1,11 @@
 <template>
-        <footer>
+    <footer>
         <div class="social-icons">
             <a href="https://github.com/Reyzouu" target="_blank"><img src="./Images/github.png" alt="GitHub"></a>
-            <a href="https://www.linkedin.com/in/leny-desaegher-a78749306/" target="_blank"><img src="./Images/linkedin.png" alt="LinkedIn"></a>
+            <a href="https://Linkedin.com/in/leny-desaegher-a78749306/" target="_blank"><img src="./Images/Linkedin.png" alt="Linkedin"></a>
         </div>
 
-        <p>Date de la dernière mise à jour : <span id="last-updated">15/08/2024</span></p>
+        <p>Date de la dernière mise à jour : <span id="last-updated">27/092024</span></p>
     </footer>
 </template>
 
@@ -30,4 +30,5 @@ footer {
 
 #presentation {
     margin: 20px;
-}</style>
+}
+</style>

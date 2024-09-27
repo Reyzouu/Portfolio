@@ -1,7 +1,7 @@
 <template>
     <header>
         <div class="logo">
-            <a href="Lien_vers_la_page_accueil"><img src="./Images/Flèche.png" alt="logo"></a>
+            <a href="Lien_vers_la_page_accueil"> <img src="./Images/Flèche.png" alt="logo"></a>
         </div>
         <nav>
             <ul>
@@ -20,7 +20,7 @@ export default {
 };
 </script>
 
-<style scoped> 
+<style scoped>
 header {
     background-color: #333;
     color: #fff;
@@ -36,7 +36,6 @@ header {
 
 nav ul {
     list-style-type: none;
-    display: flex;
 }
 
 nav ul li {
@@ -47,3 +46,4 @@ nav ul li a {
     color: #fff;
     text-decoration: none;
 }
+</style>

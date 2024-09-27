@@ -1,17 +1,12 @@
-/* Réinitialisation des marges et des paddings */
-* {
+/* Réinitialisation des marges et des paddings*/
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Style de base pour le body et les polices */
+/*Style de base pour le body et les polices*/
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
-
-
-
-
-
