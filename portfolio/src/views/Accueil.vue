@@ -85,13 +85,16 @@ export default {
     components: { Modal },
     data() {
         return {
+            // Données pour le formulaire de contact
             form: {
                 nom: '',
                 prenom: '',
                 objet: '',
                 message: '',
             },
-            message: null,
+            message: null, // Message de confirmation ou d'erreur du formulaire
+
+            // Données pour la modal dynamique
             modal: {
                 isVisible: false,
                 title: '',
@@ -100,6 +103,8 @@ export default {
                 link: '',
                 githubLink: '',
             },
+
+            // Liste des créations
             creations: [
                 {
                     title: 'CV',
@@ -123,9 +128,33 @@ export default {
         };
     },
     methods: {
+        // Gestion du formulaire de contact
         handleSubmit() {
-            // Soumission du formulaire (inchangé)
+            const formData = new FormData();
+            formData.append('nom', this.form.nom);
+            formData.append('prenom', this.form.prenom);
+            formData.append('objet', this.form.objet);
+            formData.append('message', this.form.message);
+
+            fetch('/envoyer-message', {
+                method: 'POST',
+                body: formData,
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        this.message = { text: 'Votre message a bien été envoyé.', type: 'success' };
+                        this.$refs.form.reset();
+                    } else {
+                        this.message = { text: 'Une erreur est survenue. Veuillez réessayer.', type: 'error' };
+                    }
+                })
+                .catch((error) => {
+                    console.error('Erreur:', error);
+                    this.message = { text: 'Une erreur est survenue. Veuillez réessayer.', type: 'error' };
+                });
         },
+
+        // Gestion des images des créations
         currentImage(project) {
             return project.images[project.currentIndex];
         },
@@ -136,6 +165,8 @@ export default {
             project.currentIndex =
                 (project.currentIndex - 1 + project.images.length) % project.images.length;
         },
+
+        // Gestion de la modal dynamique
         openModal(creation) {
             this.modal = {
                 isVisible: true,
