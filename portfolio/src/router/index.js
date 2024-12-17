@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import NotFound from '@/views/NotFound.vue';
 import Accueil from '@/views/Accueil.vue';
+import EnvoyerMessage from '@/components/EnvoyerMessage.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -14,6 +15,11 @@ const router = createRouter({
       path: '/:pathMatch(.*)*',
       name: 'NotFound',
       component: NotFound,
+    },
+    {
+      path: '/envoyer-message',
+      name: 'EnvoyerMessage',
+      component: EnvoyerMessage,
     },
   ],
 

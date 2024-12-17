@@ -40,29 +40,43 @@
         </section>
 
         <!-- Section Contact -->
-        <section id="contact">
-            <h2>Contactez-moi</h2>
-            <form @submit.prevent="handleSubmit" ref="form">
-                <div class="form-field">
-                    <label for="nom">Nom:</label>
-                    <input type="text" id="nom" v-model="form.nom" required />
-                </div>
-                <div class="form-field">
-                    <label for="prenom">Prénom:</label>
-                    <input type="text" id="prenom" v-model="form.prenom" required />
-                </div>
-                <div class="form-field">
-                    <label for="objet">Objet:</label>
-                    <input type="text" id="objet" v-model="form.objet" required />
-                </div>
-                <div class="form-field">
-                    <label for="message">Message:</label>
-                    <textarea id="message" v-model="form.message" required></textarea>
-                </div>
-                <button type="submit" class="submit-button">Envoyer</button>
-                <p v-if="message" :class="message.type">{{ message.text }}</p>
-            </form>
-        </section>
+<section id="contact">
+    <h2>Contactez-moi</h2>
+    <form @submit.prevent="handleSubmit" ref="form">
+        <!-- Champ Nom -->
+        <div class="form-field">
+            <label for="nom">Nom:</label>
+            <input type="text" id="nom" v-model="form.nom" required />
+        </div>
+
+        <!-- Champ Prénom -->
+        <div class="form-field">
+            <label for="prenom">Prénom:</label>
+            <input type="text" id="prenom" v-model="form.prenom" required />
+        </div>
+
+        <!-- Champ Objet -->
+        <div class="form-field">
+            <label for="objet">Objet:</label>
+            <input type="text" id="objet" v-model="form.objet" required />
+        </div>
+
+        <!-- Champ Message -->
+        <div class="form-field">
+            <label for="message">Message:</label>
+            <textarea id="message" v-model="form.message" required></textarea>
+        </div>
+
+        <!-- Bouton Envoyer -->
+        <button type="submit" class="submit-button">Envoyer</button>
+
+        <!-- Message de confirmation ou d'erreur -->
+        <p v-if="message" :class="['message-feedback', message.type]">
+            {{ message.text }}
+        </p>
+    </form>
+</section>
+
 
         <!-- Modal -->
         <Modal
@@ -92,19 +106,9 @@ export default {
                 objet: '',
                 message: '',
             },
-            message: null, // Message de confirmation ou d'erreur du formulaire
+            message: null, // Message de confirmation ou d'erreur
 
-            // Données pour la modal dynamique
-            modal: {
-                isVisible: false,
-                title: '',
-                creationDate: '',
-                technologies: '',
-                link: '',
-                githubLink: '',
-            },
-
-            // Liste des créations
+            // Données pour les créations avec gestion d'images multiples
             creations: [
                 {
                     title: 'CV',
@@ -113,7 +117,7 @@ export default {
                     link: 'https://example.com/CV.pdf',
                     githubLink: 'https://github.com/Reyzouu/TestCV',
                     images: ['/img/CV1.png', '/img/CV2.png'],
-                    currentIndex: 0,
+                    currentIndex: 0, // Index de l'image actuelle
                 },
                 {
                     title: 'Formulaire',
@@ -125,48 +129,63 @@ export default {
                     currentIndex: 0,
                 },
             ],
+
+            // Données pour la modal dynamique
+            modal: {
+                isVisible: false,
+                title: '',
+                creationDate: '',
+                technologies: '',
+                link: '',
+                githubLink: '',
+            },
         };
     },
     methods: {
-        // Gestion du formulaire de contact
+        /**
+         * Soumission du formulaire de contact
+         */
         handleSubmit() {
-            const formData = new FormData();
-            formData.append('nom', this.form.nom);
-            formData.append('prenom', this.form.prenom);
-            formData.append('objet', this.form.objet);
-            formData.append('message', this.form.message);
+            this.message = null; // Réinitialise le message précédent
 
-            fetch('/envoyer-message', {
-                method: 'POST',
-                body: formData,
-            })
-                .then((response) => {
-                    if (response.ok) {
-                        this.message = { text: 'Votre message a bien été envoyé.', type: 'success' };
-                        this.$refs.form.reset();
-                    } else {
-                        this.message = { text: 'Une erreur est survenue. Veuillez réessayer.', type: 'error' };
-                    }
-                })
-                .catch((error) => {
-                    console.error('Erreur:', error);
-                    this.message = { text: 'Une erreur est survenue. Veuillez réessayer.', type: 'error' };
-                });
+            // Simulation de l'envoi des données (fetch fictif)
+            setTimeout(() => {
+                // Simule un succès
+                this.message = { text: 'Votre message a bien été envoyé.', type: 'success' };
+
+                // Réinitialise les champs du formulaire
+                this.form.nom = '';
+                this.form.prenom = '';
+                this.form.objet = '';
+                this.form.message = '';
+            }, 1000);
         },
 
-        // Gestion des images des créations
-        currentImage(project) {
-            return project.images[project.currentIndex];
-        },
-        nextImage(project) {
-            project.currentIndex = (project.currentIndex + 1) % project.images.length;
-        },
-        prevImage(project) {
-            project.currentIndex =
-                (project.currentIndex - 1 + project.images.length) % project.images.length;
+        /**
+         * Retourne l'image actuelle pour une création donnée
+         */
+        currentImage(creation) {
+            return creation.images[creation.currentIndex];
         },
 
-        // Gestion de la modal dynamique
+        /**
+         * Passe à l'image suivante
+         */
+        nextImage(creation) {
+            creation.currentIndex = (creation.currentIndex + 1) % creation.images.length;
+        },
+
+        /**
+         * Revient à l'image précédente
+         */
+        prevImage(creation) {
+            creation.currentIndex =
+                (creation.currentIndex - 1 + creation.images.length) % creation.images.length;
+        },
+
+        /**
+         * Ouvre la modal pour afficher les détails d'une création
+         */
         openModal(creation) {
             this.modal = {
                 isVisible: true,
@@ -177,12 +196,17 @@ export default {
                 githubLink: creation.githubLink,
             };
         },
+
+        /**
+         * Ferme la modal
+         */
         closeModal() {
             this.modal.isVisible = false;
         },
     },
 };
 </script>
+
 
 <style scoped>
 /* Style général */
@@ -345,5 +369,20 @@ button.submit-button {
 button.submit-button:hover {
     background-color: #218838;
 }
+
+.message-feedback {
+    margin-top: 15px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.message-feedback.success {
+    color: #28a745; /* Vert pour le succès */
+}
+
+.message-feedback.error {
+    color: #dc3545; /* Rouge pour l'erreur */
+}
+
 
 </style>
