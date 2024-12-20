@@ -1,35 +1,35 @@
-# Mon Portfolio Web
+# Mon Portfolio Web 
 
-Bienvenue sur le dépôt de mon portfolio web !
+Bienvenue sur le dépôt de mon portfolio web !  
 Ce projet met en avant mes compétences, mes créations et propose un formulaire pour me contacter directement.
 
-## 🌟Fonctionnalités
+## 🌟 Fonctionnalités
 
--**Page d'accueil** :Présentation personnelle et accès aux différentes sections.
--**Galerie interactive** : Affiche mes projets avec une navigation fluide entre les images.
--**Formulaire de contact** : Envoi de messages avec retour utilisateur sur le succès ou l'échec.
--**Page 404 personnalisée** : Une interface unique pour les erreurs de navigation.
+- **Page d'accueil** : Présentation personnelle et accès aux différentes sections.  
+- **Galerie interactive** : Affiche mes projets avec une navigation fluide entre les images.  
+- **Formulaire de contact** : Envoi de messages avec retour utilisateur sur le succès ou l'échec.  
+- **Page 404 personnalisée** : Une interface unique pour les erreurs de navigation.  
 
 ## 🛠️ Technologies Utilisées
 
--**Vue.js** : Framework JavaScript Principal pour la gestion de l'application.
--**CSS3** : Pour un meilleur rendement visuel.
--**HTML5** : Pour structurer la page.
--**JavaScript** : Pour des fonctionnalités supplémentaires spécifiques.
+- **Vue.js** : Framework JavaScript principal pour la gestion de l'application.  
+- **CSS3** : Pour un meilleur rendu visuel.  
+- **HTML5** : Pour structurer la page.  
+- **JavaScript** : Pour des fonctionnalités supplémentaires spécifiques.  
 
 ## 🚀 Lancer le Projet en local
 
 ### Prérequis
 
-Avant de commencer, assurez vous d'avoir installé l'élément suivant :
+Avant de commencer, assurez-vous d'avoir installé l'élément suivant :
 
--[Node.js](https://nodejs.org/) (version 14 ou supérieure)
+- [Node.js](https://nodejs.org/) (version 14 ou supérieure)
 
 ### Étapes d'installation
 
-1. **Cloner le dépôt** : 
-'''bash
-git clone https://github.com/Reyzouu/Portfolio
+1. **Cloner le dépôt** :  
+   ```bash
+   git clone https://github.com/Reyzouu/Portfolio
 
 2. **Naviguer dans le répertoire du projet** :
 cd 
@@ -62,14 +62,5 @@ Les fichiers seront générés dans le dossier dist.
 ├── README.md       # Documentation du projet
 ├── package.json    # Dépendances et scripts du projet
 └── vite.config.js  # Configuration de Vite
-
-
-
-
-
-
-
-
-
 
 
