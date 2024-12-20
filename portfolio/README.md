@@ -1,35 +1,75 @@
-# portfolio
+# Mon Portfolio Web
 
-This template should help get you started developing with Vue 3 in Vite.
+Bienvenue sur le dépôt de mon portfolio web !
+Ce projet met en avant mes compétences, mes créations et propose un formulaire pour me contacter directement.
 
-## Recommended IDE Setup
+## 🌟Fonctionnalités
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+-**Page d'accueil** :Présentation personnelle et accès aux différentes sections.
+-**Galerie interactive** : Affiche mes projets avec une navigation fluide entre les images.
+-**Formulaire de contact** : Envoi de messages avec retour utilisateur sur le succès ou l'échec.
+-**Page 404 personnalisée** : Une interface unique pour les erreurs de navigation.
 
-## Customize configuration
+## 🛠️ Technologies Utilisées
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+-**Vue.js** : Framework JavaScript Principal pour la gestion de l'application.
+-**CSS3** : Pour un meilleur rendement visuel.
+-**HTML5** : Pour structurer la page.
+-**JavaScript** : Pour des fonctionnalités supplémentaires spécifiques.
 
-## Project Setup
+## 🚀 Lancer le Projet en local
 
-```sh
+### Prérequis
+
+Avant de commencer, assurez vous d'avoir installé l'élément suivant :
+
+-[Node.js](https://nodejs.org/) (version 14 ou supérieure)
+
+### Étapes d'installation
+
+1. **Cloner le dépôt** : 
+'''bash
+git clone https://github.com/Reyzouu/Portfolio
+
+2. **Naviguer dans le répertoire du projet** :
+cd 
+
+3. **Installer les dépendances** :
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+4. **Lancer le projet en mode développement** :
 npm run dev
-```
 
-### Compile and Minify for Production
+Le site sera accessible à l'adresse http://localhost:5173 par défaut.
 
-```sh
+5. **Construire le projet pour la production** :
+
 npm run build
-```
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+Les fichiers seront générés dans le dossier dist.
 
-```sh
-npm run test:unit
-```
+
+## 📁 Structure du projet 
+.
+├── public/         # Fichiers publics (images, favicon, etc.)
+├── src/
+│   ├── assets/     # Ressources telles que les images, icônes, etc.
+│   ├── components/ # Composants Vue réutilisables
+│   ├── views/      # Vues principales de l'application
+│   ├── router/     # Configuration des routes Vue Router
+│   ├── App.vue     # Composant racine
+│   └── main.js     # Point d'entrée principal de l'application
+├── README.md       # Documentation du projet
+├── package.json    # Dépendances et scripts du projet
+└── vite.config.js  # Configuration de Vite
+
+
+
+
+
+
+
+
+
+
+
