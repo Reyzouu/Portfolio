@@ -8,8 +8,7 @@
                     <h1>Leny Desaegher</h1>
                     <h2>Bonjour et bienvenue sur mon portfolio !</h2>
                     <p>
-                        Je m'appelle Leny Desaegher, j'ai 18 ans et je vis en Ardèche. Actuellement en formation de
-                        développeur web, je suis passionné par le monde du numérique et je vous invite à explorer mon travail !
+                        Depuis environ 1 an, je suis cette formation
                     </p>
                 </div>
             </div>

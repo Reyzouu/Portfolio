@@ -8,9 +8,14 @@
         <!-- Navigation -->
         <nav>
             <ul>
-                <li><router-link to="#presentation">Présentation</router-link></li>
-                <li><router-link to="#creations">Créations</router-link></li>
-                <li><router-link to="#contact">Contact</router-link></li>
+                <li 
+                  v-for="item in menuItems" 
+                  :key="item.id" 
+                  :class="{ active: activeTab === item.id }"
+                  @click="setActiveTab(item.id)"
+                >
+                    <router-link :to="item.link">{{ item.label }}</router-link>
+                </li>
             </ul>
         </nav>
     </header>
@@ -19,9 +24,22 @@
 <script>
 export default {
     name: 'Header',
+    data() {
+        return {
+            activeTab: null, // ID de l'onglet actif
+            menuItems: [
+                { id: 'presentation', label: 'Présentation', link: '#presentation' },
+                { id: 'creations', label: 'Créations', link: '#creations' },
+                { id: 'contact', label: 'Contact', link: '#contact' },
+            ],
+        };
+    },
     methods: {
         scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' }); // Défilement fluide jusqu'en haut de la page
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // Défilement fluide
+        },
+        setActiveTab(id) {
+            this.activeTab = id; // Met à jour l'onglet actif
         },
     },
 };
@@ -32,19 +50,19 @@ header {
     width: 100%;
     background-color: #333;
     color: #fff;
-    padding: 10px 20px; /* Espacement horizontal */
+    padding: 10px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: fixed; /* Fixe le header en haut de la page si désiré */
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1000; /* Assure que le header passe par-dessus d'autres éléments */
+    z-index: 1000;
 }
 
 .scroll-to-top {
     position: absolute;
-    left: 10px; /* Positionnez la flèche à gauche */
+    left: 10px;
     top: 50%;
     transform: translateY(-50%);
     background-color: #555;
@@ -74,17 +92,29 @@ nav ul {
 }
 
 nav ul li {
-    margin-right: 20px;
+    position: relative;
 }
 
 nav ul li a {
     color: #fff;
     text-decoration: none;
-    transition: color 0.5s;
     font-size: large;
+    padding: 5px 0;
+}
+
+nav ul li.active::after {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Positionné sous le texte */
+    left: 0;
+    right: 0;
+    height: 3px; /* Épaisseur de la barre */
+    background-color: #fff; /* Couleur de la barre */
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #aaa;
+    color: #aaa; /* Optionnel : couleur au survol */
 }
 </style>
