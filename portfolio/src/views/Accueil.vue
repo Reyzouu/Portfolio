@@ -4,7 +4,7 @@
         <section id="presentation">
             <div class="presentation-container">
                 <img 
-                    src="/img/photo-leny.jpg" 
+                    src="/img & pdf/photo-leny.jpg" 
                     alt="Photo de Leny Desaegher" 
                     class="photo-profil" 
                 />
@@ -142,18 +142,18 @@ export default {
                     title: 'CV',
                     creationDate: 'Janvier 2023',
                     technologies: 'HTML, CSS',
-                    link: 'https://example.com/CV.pdf',
+                    link: '/img & pdf/CV.pdf',
                     githubLink: 'https://github.com/Reyzouu/TestCV',
-                    images: ['/img/CV1.png', '/img/CV2.png'],
+                    images: ['/img & pdf/CV1.png', '/img & pdf/CV2.png'],
                     currentIndex: 0, // Index de l'image actuelle
                 },
                 {
                     title: 'Formulaire',
                     creationDate: 'Mars 2023',
                     technologies: 'HTML, CSS, JavaScript',
-                    link: 'https://example.com/Formulaire',
+                    link: '/img & pdf/Form.pdf',
                     githubLink: 'https://github.com/Reyzouu/Formulaire',
-                    images: ['/img/Form1.png', '/img/Form2.png', '/img/Form3.png'],
+                    images: ['/img & pdf/Form1.png', '/img & pdf/Form2.png', '/img & pdf/Form3.png'],
                     currentIndex: 0,
                 },
             ],
@@ -275,7 +275,7 @@ h1 {
 
 #presentation h2 {
     font-size: 1.8rem;
-    color:#87212b; /* Couleur plus sombre pour distinction */
+    color:#87212b;
     margin: 40px 0 15px; /* Espacement plus large */
     font-weight: 600;
     display: flex;
