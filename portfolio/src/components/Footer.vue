@@ -1,8 +1,8 @@
 <template>
     <footer>
         <div class="social-icons">
-            <a href="https://github.com/Reyzouu" target="_blank"><img src="/img/github.png" alt="GitHub"></a>
-            <a href="https://Linkedin.com/in/leny-desaegher-a78749306/" target="_blank"><img src="/img/Linkedin.png" alt="Linkedin"></a>
+            <a href="https://github.com/Reyzouu" target="_blank"><img src="/img & pdf/github.png" alt="GitHub"></a>
+            <a href="https://Linkedin.com/in/leny-desaegher-a78749306/" target="_blank"><img src="/img & pdf/Linkedin.png" alt="Linkedin"></a>
         </div>
 
         <p>Date de la dernière mise à jour : <span>12/12/2024</span></p>
