@@ -273,7 +273,7 @@ h1 {
     font-weight: bold;
 }
 
-h2 {
+#presentation h2 {
     font-size: 1.8rem;
     color:#87212b; /* Couleur plus sombre pour distinction */
     margin: 40px 0 15px; /* Espacement plus large */
