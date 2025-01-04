@@ -140,7 +140,7 @@ export default {
             creations: [
                 {
                     title: 'CV',
-                    creationDate: 'Janvier 2023',
+                    creationDate: 'Janvier 2024',
                     technologies: 'HTML, CSS',
                     link: '/img & pdf/CV.pdf',
                     githubLink: 'https://github.com/Reyzouu/TestCV',
@@ -149,7 +149,7 @@ export default {
                 },
                 {
                     title: 'Formulaire',
-                    creationDate: 'Mars 2023',
+                    creationDate: 'Mars 2024',
                     technologies: 'HTML, CSS, JavaScript',
                     link: '/img & pdf/Form.pdf',
                     githubLink: 'https://github.com/Reyzouu/Formulaire',
