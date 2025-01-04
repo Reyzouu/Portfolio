@@ -3,13 +3,42 @@
         <!-- Section Présentation -->
         <section id="presentation">
             <div class="presentation-container">
-                <img src="/img/photo-leny.jpg" alt="Photo de Leny Desaegher" class="photo-profil" />
+                <img 
+                    src="/img/photo-leny.jpg" 
+                    alt="Photo de Leny Desaegher" 
+                    class="photo-profil" 
+                />
                 <div class="texte-presentation">
                     <h1>Leny Desaegher</h1>
-                    <h2>Bonjour et bienvenue sur mon portfolio !</h2>
-                    <p>
-                        Depuis environ 1 an, je suis cette formation
-                    </p>
+                    <h2>👋 Bonjour et bienvenue sur mon portfolio !</h2>
+                    <h3>
+                        Je m’appelle Leny Desaegher, j’ai 18 ans, 
+                        et je suis actuellement en formation de développeur web au Centre Européen de Formation. 
+                        Mon parcours a pris une tournure décisive en octobre 2023, lorsque j’ai choisi d’arrêter les cours en terminale 
+                        pour m’investir pleinement dans ma passion pour le développement et le numérique.
+                    </h3>
+
+                    <h2>💻 Une connexion précoce avec le numérique</h2>
+                    <h3>
+                        D’aussi loin que je me souvienne, le monde du numérique a toujours fait partie de ma vie. 
+                        Dès mon plus jeune âge, j’ai été exposé à cet univers grâce à mon père et à mes premières expériences 
+                        avec des consoles comme la PS3, la DS, et la Wii. Ces premières immersions dans les jeux vidéo 
+                        ont éveillé ma curiosité pour la technologie qui se cache derrière.
+                    </h3>
+
+                    <h2>🎯 Mes ambitions et objectifs</h2>
+                    <h3>
+                        Je souhaite concevoir des interfaces agréables et intuitives pour mes futurs clients ou employeurs, 
+                        tout en respectant des standards visuels sobres et élégants. J’aime rechercher l’équilibre entre 
+                        la simplicité et l’efficacité dans mes projets.
+                    </h3>
+
+                    <h2>🌟 Mes forces et ma vision</h2>
+                    <h3>
+                        Je suis quelqu’un de calme et réfléchi. J’aime prendre le temps de bien analyser une situation, 
+                        qu’il s’agisse de résoudre un bug ou d’améliorer une fonctionnalité. Une fois motivé, je me donne 
+                        pleinement dans ce que je fais.
+                    </h3>
                 </div>
             </div>
         </section>
@@ -218,13 +247,12 @@ main {
 }
 
 /* Section Présentation */
-#presentation {
+
+.presentation-container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    gap: 20px;
-    margin-bottom: 40px;
+    padding: 20px;
 }
 
 .photo-profil {
@@ -240,9 +268,31 @@ main {
     transform: scale(1.05);
 }
 
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 1.8rem;
+    color:#87212b; /* Couleur plus sombre pour distinction */
+    margin: 40px 0 15px; /* Espacement plus large */
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+h3 {
+    font-size: 1.3rem; /* Taille plus grande */
+    margin: 10px 0 ; /* Augmenter l’espacement entre les sections */
+    line-height: 1.8; /* Lisibilité accrue */
+}
+
 .texte-presentation {
     max-width: 800px;
     margin: 0 auto;
+    line-height: 1.8; /* Justification pour une meilleure lecture */
 }
 
 /* Section Créations */
