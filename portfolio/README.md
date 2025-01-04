@@ -62,11 +62,3 @@ Les fichiers seront générés dans le dossier "dist".
 ├── README.md       # Documentation du projet
 ├── package.json    # Dépendances et scripts du projet
 └── vite.config.js  # Configuration de Vite
-
-
-
-
-
-
-
-

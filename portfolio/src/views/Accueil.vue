@@ -4,7 +4,7 @@
         <section id="presentation">
             <div class="presentation-container">
                 <img 
-                    src="/img & pdf/photo-leny.jpg" 
+                    src="/img & pdf/Leny.jpeg"
                     alt="Photo de Leny Desaegher" 
                     class="photo-profil" 
                 />
