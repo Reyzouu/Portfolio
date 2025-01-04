@@ -320,7 +320,6 @@ h3 {
     max-width: 600px;
     width: 100%;
     height: 300px;
-    overflow: hidden;
 }
 
 .project-image {
@@ -328,8 +327,16 @@ h3 {
     height: 100%;
     object-fit: cover;
     border-radius: 8px;
+    transition: 0.3s ease; /* Transition uniquement sur l'ombre */
 }
 
+/* Ombre très marquée */
+.project-image:hover {
+    box-shadow: 20px 20px 40px rgba(0, 0, 0, 0.5); /* Ombre plutôt forte */
+    z-index: 1;
+}
+
+/* Autres styles de navigation */
 .nav-button {
     position: absolute;
     top: 50%;
@@ -353,6 +360,7 @@ h3 {
 .nav-button.next {
     right: 10px;
 }
+
 
 /* Voir plus */
 .voir-plus {
