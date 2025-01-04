@@ -1,4 +1,4 @@
-# Mon Portfolio Web 
+# Mon Portfolio Web
 
 Bienvenue sur le dépôt de mon portfolio web !  
 Ce projet met en avant mes compétences, mes créations et propose un formulaire pour me contacter directement.
@@ -32,7 +32,7 @@ Avant de commencer, assurez-vous d'avoir installé l'élément suivant :
    git clone https://github.com/Reyzouu/Portfolio
 
 2. **Naviguer dans le répertoire du projet** :
-cd 
+cd Portfolio
 
 3. **Installer les dépendances** :
 npm install
@@ -46,12 +46,12 @@ Le site sera accessible à l'adresse http://localhost:5173 par défaut.
 
 npm run build
 
-Les fichiers seront générés dans le dossier dist.
+Les fichiers seront générés dans le dossier "dist".
 
 
 ## 📁 Structure du projet 
 .
-├── public/         # Fichiers publics (images, favicon, etc.)
+├── public/         # Fichiers publics (images, PDF, favicon, etc.)
 ├── src/
 │   ├── assets/     # Ressources telles que les images, icônes, etc.
 │   ├── components/ # Composants Vue réutilisables
@@ -62,5 +62,11 @@ Les fichiers seront générés dans le dossier dist.
 ├── README.md       # Documentation du projet
 ├── package.json    # Dépendances et scripts du projet
 └── vite.config.js  # Configuration de Vite
+
+
+
+
+
+
 
 
